@@ -4,69 +4,110 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Kevin Peña | NOC Engineer | Aspiring Cloud Engineer</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
   <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-      background: linear-gradient(135deg, #89f7fe, #66a6ff);
-      color: #333;
-    }
-
-    header {
-      text-align: center;
-      padding: 100px 20px 50px;
-    }
-
-    /* Animation for header */
-    .animated-title {
-      display: inline-block;
-      font-size: 2.5em;
-      font-weight: bold;
-      animation: jumpIn 1s ease forwards;
-    }
-
-    .animated-subtitle {
-      display: inline-block;
-      font-size: 1.5em;
-      margin-top: 10px;
-      color: #555;
-      animation: slideIn 1s ease 0.5s forwards;
+    /* Animation for header text */
+    .hero-text h1 {
       opacity: 0;
+      transform: translateY(-50px);
+      animation: slideDown 1s forwards;
     }
 
-    @keyframes jumpIn {
-      0% { transform: translateY(-50px); opacity: 0; }
-      50% { transform: translateY(20px); opacity: 1; }
-      100% { transform: translateY(0); }
+    .hero-text p {
+      opacity: 0;
+      transform: translateY(-30px);
+      animation: slideDown 1s forwards 0.5s;
     }
 
-    @keyframes slideIn {
-      0% { transform: translateX(-100%); opacity: 0; }
-      100% { transform: translateX(0); opacity: 1; }
+    .btn {
+      opacity: 0;
+      transform: translateY(-20px);
+      animation: slideDown 1s forwards 1s;
+    }
+
+    @keyframes slideDown {
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* Fade-in for skills and projects */
+    #skills, #projects {
+      opacity: 0;
+      transform: translateY(20px);
+      animation: fadeIn 1s forwards;
+    }
+
+    #skills { animation-delay: 1.5s; }
+    #projects { animation-delay: 2s; }
+
+    @keyframes fadeIn {
+      to { opacity: 1; transform: translateY(0); }
     }
   </style>
 </head>
 <body>
+  <!-- Header / Hero -->
   <header>
-    <h1 class="animated-title">Kevin Peña</h1>
-    <p class="animated-subtitle">NOC Engineer | Aspiring Cloud Engineer</p>
+    <div class="hero-content">
+      <div class="hero-text">
+        <h1>Kevin Peña</h1>
+        <p>NOC Engineer | Aspiring Cloud Engineer</p>
+        <a href="#contact" class="btn">Get In Touch</a>
+      </div>
+      <div class="hero-photo">
+        <img src="kevin-photo.jpg" alt="Kevin Peña">
+      </div>
+    </div>
   </header>
 
+  <!-- About -->
   <section id="about">
     <h2>About Me</h2>
-    <p>I’m a NOC Engineer with experience in networking, Windows Server, and Azure. I’m building my portfolio to showcase my projects and cloud skills.</p>
+    <p>I’m a NOC Engineer with hands-on experience in networking, Windows Server, and Azure. I specialize in monitoring and optimizing network systems, while continuously exploring cloud technologies and automation to improve infrastructure efficiency.</p>
   </section>
 
+  <!-- Skills -->
+  <section id="skills">
+    <h2>Skills</h2>
+    <div class="skill-list">
+      <span>Azure</span>
+      <span>Windows Server</span>
+      <span>Active Directory</span>
+      <span>Networking</span>
+      <span>PowerShell</span>
+    </div>
+  </section>
+
+  <!-- Projects -->
+  <section id="projects">
+    <h2>Projects</h2>
+    <div class="projects">
+      <div class="project-card">
+        <h3>Portfolio Website</h3>
+        <p>My personal portfolio built with HTML/CSS and hosted on GitHub Pages.</p>
+        <a href="https://github.com/Keviin213/kpportfoliosite" target="_blank">View Project</a>
+      </div>
+      <div class="project-card">
+        <h3>NOC Automation Script</h3>
+        <p>PowerShell scripts for network monitoring and alert automation.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
   <section id="contact">
     <h2>Contact Me</h2>
-    <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+    <form action="https://formspree.io/f/movkpvoo" method="POST">
       <input type="text" name="name" placeholder="Your Name" required>
       <input type="email" name="email" placeholder="Your Email" required>
       <textarea name="message" placeholder="Your Message" required></textarea>
       <button type="submit">Send</button>
     </form>
   </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2025 Kevin Peña. <a href="https://github.com/Keviin213" target="_blank">GitHub</a></p>
+  </footer>
 </body>
 </html>
