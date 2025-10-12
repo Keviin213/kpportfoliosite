@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Kevin Peña | NOC Engineer | Aspiring Cloud Engineer</title>
+  <title>Kevin Peña | Systems Engineer | Aspiring Systems Administrator</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
   <style>
@@ -20,10 +20,28 @@
       animation: slideDown 1s forwards 0.5s;
     }
 
-    .btn {
+    .hero-buttons {
+      margin-top: 20px;
+      display: flex;
+      gap: 15px;
       opacity: 0;
       transform: translateY(-20px);
       animation: slideDown 1s forwards 1s;
+    }
+
+    .btn {
+      padding: 10px 20px;
+      background-color: #0077b5;
+      color: white;
+      text-decoration: none;
+      border-radius: 5px;
+      font-weight: 600;
+      transition: background-color 0.3s, transform 0.2s;
+    }
+
+    .btn:hover {
+      background-color: #005f8e;
+      transform: translateY(-3px);
     }
 
     @keyframes slideDown {
@@ -43,27 +61,74 @@
     @keyframes fadeIn {
       to { opacity: 1; transform: translateY(0); }
     }
+
+    /* Shadow and styling for skills */
+    .skill-list span {
+      display: inline-block;
+      margin: 10px;
+      padding: 10px 15px;
+      background-color: #f8f8f8;
+      border-radius: 8px;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+      font-weight: 600;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+
+    .skill-list span:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+    }
+
+    /* Shadow and styling for projects */
+    .project-card {
+      background-color: #fff;
+      padding: 20px;
+      margin: 15px 0;
+      border-radius: 10px;
+      box-shadow: 0 8px 25px rgba(0,0,0,0.35);
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+
+    .project-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 12px 35px rgba(0,0,0,0.45);
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 50px;
+      background-color: #f0f2f5;
+    }
+
+    .hero-photo img {
+      max-width: 200px;
+      border-radius: 50%;
+      box-shadow: 0 6px 25px rgba(0,0,0,0.3);
+    }
   </style>
 </head>
 <body>
   <!-- Header / Hero -->
   <header>
-    <div class="hero-content">
-      <div class="hero-text">
-        <h1>Kevin Peña</h1>
-        <p>NOC Engineer | Aspiring Cloud Engineer</p>
+    <div class="hero-text">
+      <h1>Kevin Peña</h1>
+      <p>Systems Engineer | Aspiring Systems Administrator</p>
+      <div class="hero-buttons">
         <a href="#contact" class="btn">Get In Touch</a>
+        <a href="https://www.linkedin.com/in/kevin-pena-698b781ab/" class="btn" target="_blank">LinkedIn</a>
       </div>
-      <div class="hero-photo">
-        <img src="kevin-photo.jpg" alt="Kevin Peña">
-      </div>
+    </div>
+    <div class="hero-photo">
+      <img src="kevin-photo.jpg" alt="Kevin Peña">
     </div>
   </header>
 
   <!-- About -->
   <section id="about">
     <h2>About Me</h2>
-    <p>I’m a NOC Engineer with hands-on experience in networking, Windows Server, and Azure. I specialize in monitoring and optimizing network systems, while continuously exploring cloud technologies and automation to improve infrastructure efficiency.</p>
+    <p>I’m a Systems Engineer with hands-on experience in networking, Windows Server, and Azure. I specialize in monitoring and optimizing network systems, while continuously exploring cloud technologies and automation to improve infrastructure efficiency.</p>
   </section>
 
   <!-- Skills -->
