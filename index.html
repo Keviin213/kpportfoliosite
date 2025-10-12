@@ -7,7 +7,21 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
   <style>
-    /* Animation for header text */
+    /* Header / Hero */
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 50px;
+      background-color: #1a1f2b; /* Darker background */
+      color: #ffffff; /* White text */
+    }
+
+    .hero-text h1, .hero-text p {
+      color: #ffffff; /* Ensure text is visible */
+    }
+
+    /* Hero Animation */
     .hero-text h1 {
       opacity: 0;
       transform: translateY(-50px);
@@ -48,26 +62,26 @@
       to { opacity: 1; transform: translateY(0); }
     }
 
-    /* Fade-in for skills and projects */
-    #skills, #projects {
-      opacity: 0;
-      transform: translateY(20px);
-      animation: fadeIn 1s forwards;
+    /* About Section */
+    #about {
+      padding: 50px 20px;
+      max-width: 900px;
+      margin: auto;
     }
 
-    #skills { animation-delay: 1.5s; }
-    #projects { animation-delay: 2s; }
-
-    @keyframes fadeIn {
-      to { opacity: 1; transform: translateY(0); }
+    /* Skills Section */
+    #skills {
+      padding: 50px 20px;
+      max-width: 900px;
+      margin: auto;
     }
 
-    /* Shadow and styling for skills */
     .skill-list span {
       display: inline-block;
       margin: 10px;
       padding: 10px 15px;
-      background-color: #f8f8f8;
+      background-color: #f0f0f0;
+      color: #1a1f2b; /* Dark text for visibility */
       border-radius: 8px;
       box-shadow: 0 6px 20px rgba(0,0,0,0.3);
       font-weight: 600;
@@ -79,7 +93,13 @@
       box-shadow: 0 10px 30px rgba(0,0,0,0.4);
     }
 
-    /* Shadow and styling for projects */
+    /* Projects Section */
+    #projects {
+      padding: 50px 20px;
+      max-width: 900px;
+      margin: auto;
+    }
+
     .project-card {
       background-color: #fff;
       padding: 20px;
@@ -94,12 +114,41 @@
       box-shadow: 0 12px 35px rgba(0,0,0,0.45);
     }
 
-    header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 50px;
-      background-color: #f0f2f5;
+    /* Contact Section */
+    #contact {
+      padding: 50px 20px;
+      max-width: 600px;
+      margin: auto;
+    }
+
+    #contact input, #contact textarea, #contact button {
+      display: block;
+      width: 100%;
+      margin-bottom: 15px;
+      padding: 10px;
+      font-size: 16px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+    }
+
+    #contact button {
+      background-color: #0077b5;
+      color: #fff;
+      border: none;
+      cursor: pointer;
+      font-weight: 600;
+    }
+
+    #contact button:hover {
+      background-color: #005f8e;
+    }
+
+    /* Footer */
+    footer {
+      text-align: center;
+      padding: 20px;
+      background-color: #1a1f2b;
+      color: #ffffff;
     }
 
     .hero-photo img {
@@ -115,64 +164,4 @@
     <div class="hero-text">
       <h1>Kevin Peña</h1>
       <p>Systems Engineer | Aspiring Systems Administrator</p>
-      <div class="hero-buttons">
-        <a href="#contact" class="btn">Get In Touch</a>
-        <a href="https://www.linkedin.com/in/kevin-pena-698b781ab/" class="btn" target="_blank">LinkedIn</a>
-      </div>
-    </div>
-    <div class="hero-photo">
-      <img src="kevin-photo.jpg" alt="Kevin Peña">
-    </div>
-  </header>
-
-  <!-- About -->
-  <section id="about">
-    <h2>About Me</h2>
-    <p>I’m a Systems Engineer with hands-on experience in networking, Windows Server, and Azure. I specialize in monitoring and optimizing network systems, while continuously exploring cloud technologies and automation to improve infrastructure efficiency.</p>
-  </section>
-
-  <!-- Skills -->
-  <section id="skills">
-    <h2>Skills</h2>
-    <div class="skill-list">
-      <span>Azure</span>
-      <span>Windows Server</span>
-      <span>Active Directory</span>
-      <span>Networking</span>
-      <span>PowerShell</span>
-    </div>
-  </section>
-
-  <!-- Projects -->
-  <section id="projects">
-    <h2>Projects</h2>
-    <div class="projects">
-      <div class="project-card">
-        <h3>Portfolio Website</h3>
-        <p>My personal portfolio built with HTML/CSS and hosted on GitHub Pages.</p>
-        <a href="https://github.com/Keviin213/kpportfoliosite" target="_blank">View Project</a>
-      </div>
-      <div class="project-card">
-        <h3>NOC Automation Script</h3>
-        <p>PowerShell scripts for network monitoring and alert automation.</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- Contact -->
-  <section id="contact">
-    <h2>Contact Me</h2>
-    <form action="https://formspree.io/f/movkpvoo" method="POST">
-      <input type="text" name="name" placeholder="Your Name" required>
-      <input type="email" name="email" placeholder="Your Email" required>
-      <textarea name="message" placeholder="Your Message" required></textarea>
-      <button type="submit">Send</button>
-    </form>
-  </section>
-
-  <!-- Footer -->
-  <footer>
-    <p>© 2025 Kevin Peña. <a href="https://github.com/Keviin213" target="_blank">GitHub</a></p>
-  </footer>
-</body>
-</html>
+      <div class="hero-but
